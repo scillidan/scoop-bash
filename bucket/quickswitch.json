@@ -8,7 +8,7 @@
     },
     "notes": "In $dir, run \"Ahk2Exe /in QuickSwitch.ahk /icon res/icon.ico /out QuickSwitch.exe\" to build EXE (x64).",
     "url": "https://github.com/fenchai23/QuickSwitch/archive/refs/tags/v0.5.zip",
-    "hash": "338DC3FAB548B1A35CE8FC83BD5599B7C17FFE48745C42724F771CFF18B2E60F",
+    "hash": "f1ddd4e1ea09aba1c83461317e48fa9b78d66a9089b3199e5a009746fefd1f62",
     "extract_dir": "QuickSwitch-0.5",
     "pre_install": [
         "Remove-Item \"$dir\\QuickSwitch.ini\"",
