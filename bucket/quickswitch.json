@@ -1,0 +1,24 @@
+{
+    "version": "0.5",
+    "description": "Uses opened file manager folders in File dialogs.",
+    "homepage": "https://github.com/fenchai23/QuickSwitch",
+    "license": "Unlicense license",
+    "suggest": "Versions/autohotkey1.1",
+    "notes": "In $dir, run \"Ahk2Exe /in QuickSwitch.ahk /icon res/icon.ico /out QuickSwitch.exe\" to build EXE (x64).",
+    "url": "https://github.com/fenchai23/QuickSwitch/archive/main.zip",
+    "hash": "338dc3fab548b1a35ce8fc83bd5599b7c17ffe48745c42724f771cff18b2e60f",
+    "extract_dir": "QuickSwitch-main",
+    "pre_install": [
+        "Remove-Item \"$dir\\QuickSwitch.ini\"",
+        "New-Item -Path \"$dir\\QuickSwitch.ini\" -ItemType File -Force",
+        "Add-Content -Path \"$dir\\QuickSwitch.ini\" -Value \"[Preferences]`nAlways Auto Switch=1\""
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/fenchai23/QuickSwitch/commits",
+        "regex": "(\\d+)-(\\d+)-(\\d+)+T",
+        "replace": "$1$2$3"
+    },
+    "autoupdate": {
+        "url": "https://github.com/fenchai23/QuickSwitch/archive/main.zip"
+    }
+}
