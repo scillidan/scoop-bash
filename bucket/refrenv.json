@@ -12,8 +12,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "url": "https://github.com/badrelmers/RefrEnv/archive/refs/tags/v$version.zip"
-        }
+        "url": "https://github.com/badrelmers/RefrEnv/archive/refs/tags/v$version.zip"
     }
 }
