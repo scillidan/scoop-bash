@@ -4,7 +4,7 @@
     "homepage": "https://github.com/GithubUserAccountAmazing/ShortScript",
     "license": "GPL-3.0-or-later",
     "suggest": {
-        "Versions/autohotkey1.1": "Requires AutoHotkey 1.1"
+        "AutoHotkey 1.1": "Versions/autohotkey1.1"
     },
     "notes": "In $dir, run \"Ahk2Exe /in ShortScript.ahk /out ShortScript.exe\" to build EXE (x64).",
     "url": "https://github.com/GithubUserAccountAmazing/ShortScript/archive/main.zip",
