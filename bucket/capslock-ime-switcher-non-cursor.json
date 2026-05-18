@@ -14,6 +14,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/LengxiQwQ/capslock-ime-switcher/releases/download/$version/Non_Cursor_CapsLock_Input_Method_Switcher_v$version.exe"
+        "url": "https://github.com/LengxiQwQ/capslock-ime-switcher/releases/download/v$version/Non_Cursor_CapsLock_Input_Method_Switcher_v$version.exe"
     }
 }
