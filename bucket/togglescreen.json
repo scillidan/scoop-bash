@@ -4,7 +4,7 @@
     "homepage": "https://github.com/ArturTkaczuk/toggle-screen-autohotkey",
     "license": "MIT",
     "suggest": {
-        "Versions/autohotkey1.1": "Requires AutoHotkey 1.1"
+        "AutoHotkey 1.1": "Versions/autohotkey1.1"
     },
     "notes": "In $dir, run \"Ahk2Exe /in \"Toggle Screen.ahk\" /out ToggleScreen.exe\" to build EXE (x64).",
     "url": "https://github.com/ArturTkaczuk/toggle-screen-autohotkey/archive/main.zip",
