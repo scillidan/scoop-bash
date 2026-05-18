@@ -2,25 +2,26 @@
     "version": "0.5",
     "description": "Uses opened file manager folders in File dialogs.",
     "homepage": "https://github.com/fenchai23/QuickSwitch",
-    "license": "Unlicense license",
+    "license": "Unlicense",
     "suggest": {
         "Versions/autohotkey1.1": "Requires AutoHotkey 1.1"
     },
     "notes": "In $dir, run \"Ahk2Exe /in QuickSwitch.ahk /icon res/icon.ico /out QuickSwitch.exe\" to build EXE (x64).",
-    "url": "https://github.com/fenchai23/QuickSwitch/archive/main.zip",
-    "hash": "338dc3fab548b1a35ce8fc83bd5599b7c17ffe48745c42724f771cff18b2e60f",
-    "extract_dir": "QuickSwitch-main",
+    "url": "https://github.com/fenchai23/QuickSwitch/archive/refs/tags/v0.5.zip",
+    "hash": "338DC3FAB548B1A35CE8FC83BD5599B7C17FFE48745C42724F771CFF18B2E60F",
+    "extract_dir": "QuickSwitch-0.5",
     "pre_install": [
         "Remove-Item \"$dir\\QuickSwitch.ini\"",
         "New-Item -Path \"$dir\\QuickSwitch.ini\" -ItemType File -Force",
         "Add-Content -Path \"$dir\\QuickSwitch.ini\" -Value \"[Preferences]`nAlways Auto Switch=1\""
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/fenchai23/QuickSwitch/commits",
-        "regex": "(\\d+)-(\\d+)-(\\d+)+T",
-        "replace": "$1$2$3"
+        "url": "https://api.github.com/repos/fenchai23/QuickSwitch/tags",
+        "regex": "\"name\":\\s*\"v([\\d.]+)\"",
+        "replace": "$1"
     },
     "autoupdate": {
-        "url": "https://github.com/fenchai23/QuickSwitch/archive/main.zip"
+        "url": "https://github.com/fenchai23/QuickSwitch/archive/refs/tags/v$version.zip",
+        "extract_dir": "QuickSwitch-$version"
     }
 }
