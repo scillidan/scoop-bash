@@ -4,7 +4,7 @@
     "homepage": "https://github.com/fenchai23/QuickSwitch",
     "license": "Unlicense",
     "suggest": {
-        "Versions/autohotkey1.1": "Requires AutoHotkey 1.1"
+        "AutoHotkey 1.1": "Versions/autohotkey1.1"
     },
     "notes": "In $dir, run \"Ahk2Exe /in QuickSwitch.ahk /icon res/icon.ico /out QuickSwitch.exe\" to build EXE (x64).",
     "url": "https://github.com/fenchai23/QuickSwitch/archive/refs/tags/v0.5.zip",
