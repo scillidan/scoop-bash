@@ -48,7 +48,6 @@
         "replace": "$1$2$3"
     },
     "autoupdate": {
-        "url": "https://github.com/fenchai23/QuickSwitch/archive/refs/heads/main.zip",
-        "extract_dir": "QuickSwitch-main"
+        "url": "https://github.com/fenchai23/QuickSwitch/archive/refs/heads/main.zip"
     }
 }
