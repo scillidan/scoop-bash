@@ -10,7 +10,6 @@
             "hash": "038D09B82E63A52608A342A697C50254C71AB8DBEEF3BDB5A4E1E15DB5673D94"
         }
     },
-    "pre_install": "New-Item \"$dir\\settings.ini\" -ItemType File -Force | Out-Null",
     "post_install": [
         "$dirpath = $dir.Replace('\\', '\\\\')",
         "'add-startup.reg', 'remove-startup.reg' | ForEach-Object {",
