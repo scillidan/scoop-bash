@@ -1,27 +1,53 @@
 {
-    "version": "0.5",
+    "version": "20250518",
     "description": "Uses opened file manager folders in File dialogs.",
     "homepage": "https://github.com/fenchai23/QuickSwitch",
     "license": "Unlicense",
     "suggest": {
         "AutoHotkey 1.1": "Versions/autohotkey1.1"
     },
-    "notes": "In $dir, run \"Ahk2Exe /in QuickSwitch.ahk /icon res/icon.ico /out QuickSwitch.exe\" to build EXE (x64).",
-    "url": "https://github.com/fenchai23/QuickSwitch/archive/refs/tags/v0.5.zip",
-    "hash": "f1ddd4e1ea09aba1c83461317e48fa9b78d66a9089b3199e5a009746fefd1f62",
-    "extract_dir": "QuickSwitch-0.5",
+    "notes": [
+        "Start QuickSwitch with Windows by running:",
+        "reg import \"$dir\\add-startup.reg\""
+    ],
+    "url": "https://github.com/fenchai23/QuickSwitch/archive/refs/heads/main.zip",
+    "hash": "338dc3fab548b1a35ce8fc83bd5599b7c17ffe48745c42724f771cff18b2e60f",
+    "extract_dir": "QuickSwitch-main",
     "pre_install": [
         "Remove-Item \"$dir\\QuickSwitch.ini\"",
-        "New-Item -Path \"$dir\\QuickSwitch.ini\" -ItemType File -Force",
-        "Add-Content -Path \"$dir\\QuickSwitch.ini\" -Value \"[Preferences]`nAlways Auto Switch=1\""
+        "Set-Content \"$dir\\QuickSwitch.ini\" '[Preferences]\nAlways Auto Switch=1' -Encoding Ascii",
+         "& \"$env:SCOOP\\apps\\autohotkey1.1\\current\\Compiler\\Ahk2Exe.exe\" /in \"$dir\\QuickSwitch.ahk\" /icon \"$dir\\res\\icon.ico\" /out \"$dir\\QuickSwitch.exe\""
+    ],
+    "post_install": [
+        "$shortcutPath = \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\QuickSwitch.lnk\"",
+        "$targetPath = \"$dir\\QuickSwitch.exe\"",
+        "$WshShell = New-Object -ComObject WScript.Shell",
+        "$Shortcut = $WshShell.CreateShortcut($shortcutPath)",
+        "$Shortcut.TargetPath = $targetPath",
+        "$Shortcut.WorkingDirectory = $dir",
+        "$Shortcut.IconLocation = \"$dir\\res\\icon.ico\"",
+        "$Shortcut.Save()",
+        "$dirpath = $dir.Replace('\\', '\\\\')",
+        "'add-startup.reg', 'remove-startup.reg' | ForEach-Object {",
+        "    if (Test-Path \"$bucketsdir\\scoop-bucket\\scripts\\$app\\$_\") {",
+        "        $content = Get-Content \"$bucketsdir\\scoop-bucket\\scripts\\$app\\$_\"",
+        "        $content = $content.Replace('$dir', $dirpath)",
+        "        if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
+        "        $content | Set-Content -Path \"$dir\\$_\"",
+        "    }",
+        "}"
+    ],
+    "uninstall": [
+        "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\QuickSwitch.lnk\" -ErrorAction SilentlyContinue",
+        "if ($cmd -eq 'uninstall') { reg import \"$dir\\remove-startup.reg\" }"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/fenchai23/QuickSwitch/tags",
-        "regex": "\"name\":\\s*\"v([\\d.]+)\"",
-        "replace": "$1"
+        "url": "https://api.github.com/repos/fenchai23/QuickSwitch/commits?per_page=1",
+        "regex": "\"date\":\\s*\"(\\d{4})-(\\d{2})-(\\d{2})",
+        "replace": "$1$2$3"
     },
     "autoupdate": {
-        "url": "https://github.com/fenchai23/QuickSwitch/archive/refs/tags/v$version.zip",
-        "extract_dir": "QuickSwitch-$version"
+        "url": "https://github.com/fenchai23/QuickSwitch/archive/refs/heads/main.zip",
+        "extract_dir": "QuickSwitch-main"
     }
 }
