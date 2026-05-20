@@ -13,9 +13,7 @@
     "url": "https://github.com/GithubUserAccountAmazing/ShortScript/archive/master.zip",
     "hash": "b75687c4fb9cceff9b582edd27ce71a98a7de5cb86f4f60148915dec0a4a7042",
     "extract_dir": "ShortScript-main",
-    "pre_install": [
-        "& \"$env:SCOOP\\apps\\autohotkey1.1\\current\\Compiler\\Ahk2Exe.exe\" /in \"$dir\\ShortScript.ahk\" /out \"$dir\\ShortScript.exe\""
-    ],
+    "pre_install": "& \"$env:SCOOP\\apps\\autohotkey1.1\\current\\Compiler\\Ahk2Exe.exe\" /in \"$dir\\ShortScript.ahk\" /out \"$dir\\ShortScript.exe\"",
     "post_install": [
         "$shortcutPath = \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\ShortScript.lnk\"",
         "$targetPath = \"$dir\\ShortScript.exe\"",
