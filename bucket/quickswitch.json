@@ -15,7 +15,7 @@
     "extract_dir": "QuickSwitch-main",
     "pre_install": [
         "Remove-Item \"$dir\\QuickSwitch.ini\"",
-        "Set-Content \"$dir\\QuickSwitch.ini\" '[Preferences]\nAlways Auto Switch=1' -Encoding Ascii",
+        "@('[Preferences]', 'Always Auto Switch=1') | Set-Content \"$dir\\QuickSwitch.ini\" -Encoding Ascii",
          "& \"$env:SCOOP\\apps\\autohotkey1.1\\current\\Compiler\\Ahk2Exe.exe\" /in \"$dir\\QuickSwitch.ahk\" /icon \"$dir\\res\\icon.ico\" /out \"$dir\\QuickSwitch.exe\""
     ],
     "post_install": [
