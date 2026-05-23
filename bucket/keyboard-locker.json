@@ -5,6 +5,9 @@
     "license": "GPL-3.0-or-later",
     "notes": [
         "Configuration file (settings.ini) and icons (unlocked.ico, locked.ico) is auto-generated on first run.",
+        "You can customize the shortcut, for example:",
+        "shortcut=^!+Insert",
+        "shortcut-hint=Ctrl+Alt+Shift+Insert",
         "You can start Keyboard Locker with Windows by running:",
         "reg import \"$dir\\add-startup.reg\""
     ],
