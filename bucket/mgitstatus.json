@@ -7,11 +7,11 @@
         "Git": "main/git"
     },
     "notes": [
-      "It must be used inside a Bash/Zsh session,",
-      "The easiest Windows option is Git Bash.",
-      "(Experimental) To keep the right tools first, add these to the TOP of your System PATH",
-      "  $env:SCOOP\\apps\\git\\current\\bin",
-      "  $env:SCOOP\\apps\\git\\current\\usr\\bin"
+        "It must be used inside a Bash/Zsh session,",
+        "The easiest Windows option is Git Bash.",
+        "(Experimental) To keep the right tools first, add these to the TOP of your System PATH",
+        "  $env:SCOOP\\apps\\git\\current\\bin",
+        "  $env:SCOOP\\apps\\git\\current\\usr\\bin"
     ],
     "url": "https://github.com/fboender/multi-git-status/archive/refs/tags/2.3.zip",
     "hash": "B62B9DAC64002E767C6229F0C6F7A51231DBE4475DC765AB3D1E5073D87588D3",
