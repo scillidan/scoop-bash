@@ -7,11 +7,11 @@
         "Git": "main/git"
     },
     "notes": [
-      "It must be used inside a Bash/Zsh session,",
-      "The easiest Windows option is Git Bash.",
-      "(Experimental) To keep the right tools first, add these to the TOP of your System PATH",
-      "  $env:SCOOP\\apps\\git\\current\\bin",
-      "  $env:SCOOP\\apps\\git\\current\\usr\\bin"
+        "It must be used inside a Bash/Zsh session,",
+        "The easiest Windows option is Git Bash.",
+        "(Experimental) To keep the right tools first, add these to the TOP of your System PATH",
+        "  $env:SCOOP\\apps\\git\\current\\bin",
+        "  $env:SCOOP\\apps\\git\\current\\usr\\bin"
     ],
     "url": "https://github.com/Bhupesh-V/ugit/releases/download/v5.9/ugit",
     "hash": "bacb73e70c997a3790c6bdebcaa6253381aae6214eaceb1ffd797d989708699b",
