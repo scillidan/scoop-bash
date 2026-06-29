@@ -25,6 +25,6 @@
         "regex": "v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/TheCheerfulDev/warp-wd/releases/download/v$version/basename"
+        "url": "https://github.com/TheCheerfulDev/warp-wd/archive/refs/tags/v$version.zip"
     }
 }
