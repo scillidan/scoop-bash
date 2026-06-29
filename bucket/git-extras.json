@@ -4,18 +4,14 @@
     "homepage": "https://github.com/tj/git-extras",
     "license": "MIT",
     "suggest": {
-        "Git": "Main/git"
+        "Git": "main/git"
     },
     "notes": [
         "Currently, there is no uninstall script.",
         "You can try reinstalling the Git with the patches applied."
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/tj/git-extras/archive/refs/tags/7.5.0.zip",
-            "hash": "298f156dc7b73781721377860aa3d4199eae364dbe1bcab389eaacf7d069642e"
-        }
-    },
+    "url": "https://github.com/tj/git-extras/archive/refs/tags/7.5.0.zip",
+    "hash": "298f156dc7b73781721377860aa3d4199eae364dbe1bcab389eaacf7d069642e",
     "pre_install": [
         "Get-ChildItem \"$dir\\git-extras-7.5.0\\*\" -Recurse | Where-Object { $_.PSIsContainer } | ForEach-Object { $dest = $_.FullName.Replace('\\git-extras-7.5.0\\', '\\'); New-Item -ItemType Directory -Path $dest -Force | Out-Null }",
         "Get-ChildItem \"$dir\\git-extras-7.5.0\\*\" -Recurse -File | Where-Object { $_.Length -gt 20 } | ForEach-Object { $dest = $_.FullName.Replace('\\git-extras-7.5.0\\', '\\'); Copy-Item $_.FullName $dest -Force }",
