@@ -18,7 +18,7 @@
         "Add-Content -Path \"$dir\\warp-wd.cmd\" -Value \"bash $env:SCOOP\\apps\\warp-wd\\current\\warp %*\""
     ],
     "bin": "warp-wd.cmd",
-    "post_install": "iwr 'https://raw.githubusercontent.com/TheCheerfulDev/warp-wd/v1.0/LICENSE' -OutFile \"$dir\\LICENSE\"",
+    "post_install": "iwr 'https://raw.githubusercontent.com/TheCheerfulDev/warp-wd/refs/tags/v0.1/LICENSE' -OutFile \"$dir\\LICENSE\"",
     "checkver": {
         "url": "https://api.github.com/repos/TheCheerfulDev/warp-wd/tags",
         "jsonpath": "$[0].name",
