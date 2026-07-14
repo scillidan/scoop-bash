@@ -33,7 +33,6 @@
         "replace": "$1$2$3"
     },
     "autoupdate": {
-        "url": "https://github.com/scillidan/git-recent/archive/master.zip",
-        "extract_dir": "git-recent-$version"
+        "url": "https://github.com/scillidan/git-recent/archive/master.zip"
     }
 }
