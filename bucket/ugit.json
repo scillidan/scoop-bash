@@ -19,6 +19,7 @@
         "New-Item -Path \"$dir\\ugit.cmd\" -ItemType File -Force",
         "Add-Content -Path \"$dir\\ugit.cmd\" -Value \"bash $env:SCOOP\\apps\\ugit\\current\\ugit %*\""
     ],
+    "post_install": "iwr 'https://raw.githubusercontent.com/Bhupesh-V/ugit/refs/tags/v5.9/LICENSE' -OutFile \"$dir\\LICENSE\"",
     "bin": "ugit.cmd",
     "checkver": "github",
     "autoupdate": {
