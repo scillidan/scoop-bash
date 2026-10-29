@@ -7,7 +7,7 @@
         "Python": "main/python"
     },
     "url": "https://github.com/scillidan/terminal-theme-switch/archive/refs/heads/main.zip",
-    "hash": "c1de4b7329333848c1e047a76e60f5d28ba34f979e7e44fcbcf7dc614595452a",
+    "hash": "ec896ef6c8469821d3aa467c6626588a237324077ded7038f22245a40eb25849",
     "extract_dir": "terminal-theme-switch-main",
     "bin": "bin\\terminal-theme-switch.cmd",
     "checkver": {
