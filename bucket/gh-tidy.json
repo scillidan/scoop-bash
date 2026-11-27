@@ -1,6 +1,6 @@
 {
     "version": "20260814",
-    "description": "Github CLI extension for cleaning up your Git workspace to get ready for the day!",
+    "description": "Github CLI Extension for tidying your Git workspace!",
     "homepage": "https://github.com/HaywardMorihara/gh-tidy",
     "license": "Unlicense",
     "suggest": {
