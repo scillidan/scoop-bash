@@ -1,27 +1,18 @@
 {
     "version": "5.9",
-    "description": "ugit helps undo git commands. Your damage control git buddy. Undo from 20+ git scenarios.",
-    "homepage": "https://github.com/Bhupesh-V/ugit",
+    "description": "Undo your last oopsie in git.",
+    "homepage": "https://bhupesh.me/undo-your-last-git-mistake-with-ugit/",
     "license": "MIT",
     "suggest": {
-        "Git": "main/git"
+        "git": "main/git",
+        "fzf": "main/fzf"
     },
-    "notes": [
-        "It must be used inside a Bash/Zsh session,",
-        "The easiest Windows option is Git Bash.",
-        "(Experimental) To keep the right tools first, add these to the TOP of your System PATH",
-        "  $env:SCOOP\\apps\\git\\current\\bin",
-        "  $env:SCOOP\\apps\\git\\current\\usr\\bin"
-    ],
     "url": "https://github.com/Bhupesh-V/ugit/releases/download/v5.9/ugit",
     "hash": "bacb73e70c997a3790c6bdebcaa6253381aae6214eaceb1ffd797d989708699b",
-    "pre_install": [
-        "New-Item -Path \"$dir\\ugit.cmd\" -ItemType File -Force",
-        "Add-Content -Path \"$dir\\ugit.cmd\" -Value \"bash $env:SCOOP\\apps\\ugit\\current\\ugit %*\""
-    ],
-    "post_install": "iwr 'https://raw.githubusercontent.com/Bhupesh-V/ugit/refs/tags/v5.9/LICENSE' -OutFile \"$dir\\LICENSE\"",
-    "bin": "ugit.cmd",
-    "checkver": "github",
+    "bin": "ugit",
+    "checkver": {
+        "github": "https://github.com/Bhupesh-V/ugit"
+    },
     "autoupdate": {
         "url": "https://github.com/Bhupesh-V/ugit/releases/download/v$version/ugit"
     }
