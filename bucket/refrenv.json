@@ -6,8 +6,8 @@
     "url": "https://github.com/badrelmers/RefrEnv/archive/refs/tags/v1.4.zip",
     "hash": "a3a8a8eefc36a01f98fca8a843669bd5ee640f0d54d9d5be5cb058f7c136a826",
     "extract_dir": "RefrEnv-1.4",
-    "pre_install": "Remove-Item -Path \"$dir\\*\" -Exclude 'refrenv.bat', 'LICENSE', 'README.md' -Recurse -Force",
-    "bin": "refrenv.bat",
+    "pre_install": "Remove-Item -Path \"$dir\\*\" -Exclude 'refrenv.bat', 'refrenv.ps1', 'refrenv.sh', 'LICENSE', 'README.md' -Recurse -Force",
+    "env_add_path": ".",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/badrelmers/RefrEnv/archive/refs/tags/v$version.zip",
